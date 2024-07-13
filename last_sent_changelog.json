@@ -1,0 +1,9 @@
+{
+    "version": "2.0.2.7",
+    "date": "2024-07-03",
+    "changelog": [
+        "Behoben: Das Problem der Verz\u00f6gerung beim Videowiedergabeergebnis der Video-Passthrough-Funktion des Konvertermoduls wurde behoben.",
+        "Behoben: Das Problem, dass die KI-Modulkonvertierung beim Herunterladen und Ausf\u00fchren der Umgebung h\u00e4ngenbleibt.",
+        "Behoben: Einige Probleme mit der Anzeige der Benutzeroberfl\u00e4che."
+    ]
+}
