@@ -11,15 +11,15 @@ from modules.changelog_parser import ChangelogParser
 from modules.discord_notifier import DiscordNotifier
 
 
-class ChangelogWatcher:
+class UniFabChangelogWatcher:
     """
-    ChangelogWatcher class monitors a specified URL for updates,
-    parses the changelog, and sends notifications to a Discord webhook.
+    UniFabChangelogWatcher class monitors a specified URL for updates,
+    parses the changelog, and sends update notifications to a Discord webhook.
     """
 
     def __init__(self, arg_url, arg_webhook_url):
         """
-        Initializes the ChangelogWatcher instance with the provided URL and Discord webhook URL.
+        Initializes the UniFabChangelogWatcher instance with the provided URL and Discord webhook URL.
 
         Args:
             arg_url (str): The URL to fetch the changelog from.
@@ -65,7 +65,7 @@ class ChangelogWatcher:
 
     def run(self):
         """
-        Runs the ChangelogWatcher to continuously monitor the changelog, parse updates,
+        Runs the UniFabChangelogWatcher to continuously monitor the changelog, parse updates,
         and send notifications to Discord.
         """
         while True:
@@ -99,5 +99,5 @@ if __name__ == "__main__":
     print(f"{Color.green('Software:')} {Color.blue(SOFTWARE_NAME)}")
     print(f"{Color.green('Creator:')} {Color.blue(AUTHOR_NAME)}")
 
-    watcher = ChangelogWatcher(URL, WEBHOOK_URL)
+    watcher = UniFabChangelogWatcher(URL, WEBHOOK_URL)
     watcher.run()
