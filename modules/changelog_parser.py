@@ -95,17 +95,9 @@ class ChangelogParser:
                 'date': date,
                 'changelog': changelog
             }
-        except ValueError as ve:
+        except (ValueError, AttributeError) as e:
             print(f"{Color.blue('[' + datetime.now().strftime('%H:%M:%S') + ']')}: "
-                  f"{Color.red('ValueError parsing HTML content:')} {ve}")
-            return None
-        except AttributeError as ae:
-            print(f"{Color.blue('[' + datetime.now().strftime('%H:%M:%S') + ']')}: "
-                  f"{Color.red('AttributeError parsing HTML content:')} {ae}")
-            return None
-        except Exception as e:
-            print(f"{Color.blue('[' + datetime.now().strftime('%H:%M:%S') + ']')}: "
-                  f"{Color.red('Error parsing HTML content:')} {e}")
+                  f"{Color.red(f'Error parsing HTML content: {e}')}")
             return None
 
     @staticmethod
@@ -121,15 +113,9 @@ class ChangelogParser:
                 json.dump(arg_changelog_data, file, indent=4)  # Update the file with indent for readability
                 print(f"{Color.blue('[' + datetime.now().strftime('%H:%M:%S') + ']')}: "
                       f"{Color.green('Changelog data saved to file.')}")
-        except FileNotFoundError as fnfe:
+        except (FileNotFoundError, IOError) as e:
             print(f"{Color.blue('[' + datetime.now().strftime('%H:%M:%S') + ']')}: "
-                  f"{Color.red('FileNotFoundError saving Changelog data:')} {fnfe}")
-        except IOError as ioe:
-            print(f"{Color.blue('[' + datetime.now().strftime('%H:%M:%S') + ']')}: "
-                  f"{Color.red('IOError saving Changelog data:')} {ioe}")
-        except Exception as e:
-            print(f"{Color.blue('[' + datetime.now().strftime('%H:%M:%S') + ']')}: "
-                  f"{Color.red('Error saving Changelog data:')} {e}")
+                  f"{Color.red(f'Error saving Changelog data: {e}')}")
 
     @staticmethod
     def load_last_sent_changelog():
@@ -155,16 +141,7 @@ class ChangelogParser:
                     print(f"{Color.blue('[' + datetime.now().strftime('%H:%M:%S') + ']')}: "
                           f"{Color.green('Empty file created for the last sent changelog data.')}")
                     return None
-        except FileNotFoundError as fnfe:
+        except (FileNotFoundError, IOError, json.JSONDecodeError) as e:
             print(f"{Color.blue('[' + datetime.now().strftime('%H:%M:%S') + ']')}: "
-                  f"{Color.red('FileNotFoundError loading last sent changelog data:')} {fnfe}")
-        except IOError as ioe:
-            print(f"{Color.blue('[' + datetime.now().strftime('%H:%M:%S') + ']')}: "
-                  f"{Color.red('IOError loading last sent changelog data:')} {ioe}")
-        except json.JSONDecodeError as je:
-            print(f"{Color.blue('[' + datetime.now().strftime('%H:%M:%S') + ']')}: "
-                  f"{Color.red('JSONDecodeError loading last sent changelog data:')} {je}")
-        except Exception as e:
-            print(f"{Color.blue('[' + datetime.now().strftime('%H:%M:%S') + ']')}: "
-                  f"{Color.red('Error loading last sent changelog data:')} {e}")
+                  f"{Color.red(f'Error loading last sent changelog data: {e}')}")
             return None
