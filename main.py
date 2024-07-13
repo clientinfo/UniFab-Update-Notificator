@@ -91,7 +91,7 @@ class ChangelogWatcher:
 
 if __name__ == "__main__":
     URL = 'https://de.unifab.ai/unifab-new.htm'  # Replace with the actual URL
-    WEBHOOK_URL = ('WEBHOOK URL HERE')
+    WEBHOOK_URL = 'WEBHOOK URL HERE'
     SOFTWARE_NAME = 'UniFab Update Notificator'
     AUTHOR_NAME = 'clientinfo'
 
