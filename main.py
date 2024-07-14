@@ -91,13 +91,13 @@ class UniFabChangelogWatcher:
 
 if __name__ == "__main__":
     URL = 'https://de.unifab.ai/unifab-new.htm'  # Replace with the actual URL
-    WEBHOOK_URL = 'WEBHOOK URL HERE'
+    WEBHOOK_URL = 'WEB_HOOK_HERE' # Replace with the actual Webhook url
     SOFTWARE_NAME = 'UniFab Update Notificator'
     AUTHOR_NAME = 'clientinfo'
 
     # Print software name in green and author name in blue
-    print(f"{Color.green('Software:')} {Color.blue(SOFTWARE_NAME)}")
-    print(f"{Color.green('Creator:')} {Color.blue(AUTHOR_NAME)}")
+    print(f"{Color.blue('Software:')} {Color.green(SOFTWARE_NAME)}")
+    print(f"{Color.blue('Creator:')} {Color.green(AUTHOR_NAME)}")
 
     watcher = UniFabChangelogWatcher(URL, WEBHOOK_URL)
     watcher.run()
