@@ -48,7 +48,7 @@ This module defines the `Color` class that provides ANSI escape sequences for co
 ## Screenshots
 
 ### Discord embed of the changelog:
-![img.png](Images/Discord Embed.png)
+![img.png](https://github.com/clientinfo/UniFab-Update-Notificator/blob/master/Images/Discord%20Embed.png)
 
 ### Screenshot of the running python app
-![img.png](Images/Programm Output.png)
+![img.png](https://github.com/clientinfo/UniFab-Update-Notificator/blob/master/Images/Programm%20Output.png)
