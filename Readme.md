@@ -8,7 +8,7 @@ The **UniFab Changelog Watcher** is a Python-based tool designed to watch UniFab
 
 1. **Clone the repository**:
     ```sh
-    git clone https://github.com/yourusername/unifab-changelog-watcher.git
+    git clone https://github.com/clientinfo/unifab-changelog-watcher.git
     cd unifab-changelog-watcher
     ```
 
