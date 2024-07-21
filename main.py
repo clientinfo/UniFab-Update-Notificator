@@ -74,7 +74,7 @@ class UniFabChangelogWatcher:
                 changelog_data = self.parse_changelog(html_content)
 
                 if changelog_data:
-                    if changelog_data != self.last_sent_changelog:
+                    if changelog_data != self.changelog_parser.load_last_sent_changelog():
                         self.send_to_discord_webhook("UniFab", changelog_data)
                         self.last_sent_changelog = changelog_data
                         self.changelog_parser.save_last_sent_changelog(changelog_data)  # Save immediately
@@ -91,7 +91,7 @@ class UniFabChangelogWatcher:
 
 if __name__ == "__main__":
     URL = 'https://de.unifab.ai/unifab-new.htm'  # Replace with the actual URL
-    WEBHOOK_URL = 'WEB_HOOK_HERE' # Replace with the actual Webhook url
+    WEBHOOK_URL = 'WEBHOOKURL' # Replace with the actual Webhook url
     SOFTWARE_NAME = 'UniFab Update Notificator'
     AUTHOR_NAME = 'clientinfo'
 

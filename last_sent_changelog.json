@@ -1,9 +1,9 @@
 {
-    "version": "2.0.2.7",
-    "date": "2024-07-03",
+    "version": "2.0.2.8",
+    "date": "2024-07-18",
     "changelog": [
-        "Behoben: Das Problem der Verz\u00f6gerung beim Videowiedergabeergebnis der Video-Passthrough-Funktion des Konvertermoduls wurde behoben.",
-        "Behoben: Das Problem, dass die KI-Modulkonvertierung beim Herunterladen und Ausf\u00fchren der Umgebung h\u00e4ngenbleibt.",
-        "Behoben: Einige Probleme mit der Anzeige der Benutzeroberfl\u00e4che."
+        "Optimierung: Verbesserung des Stils des Lizenzinformations-Popups.",
+        "Optimierung: Behebung einiger Anzeigeprobleme in der Benutzeroberfl\u00e4che.",
+        "Fehlerbehebung: Behebung des Problems, bei dem eine Aufforderung f\u00fcr Hintergrunddownloads erscheint, obwohl nach dem Start der Software kein Downloadinhalt vorhanden ist."
     ]
 }
